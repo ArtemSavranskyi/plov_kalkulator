@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="uk"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Калькулятор плова Ігора Лексувовича&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f3f4f6;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 500px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input::-webkit-outer-spin-button,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input::-webkit-inner-spin-button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-appearance: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type=number] {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-moz-appearance: textfield;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="flex items-center justify-center min-h-screen p-4"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container bg-white p-8 rounded-2xl shadow-xl border border-gray-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-3xl font-bold text-center text-gray-800 mb-6"&gt;Калькулятор плова Ігора Лексувовича&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-center text-gray-600 mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Введіть свої дані, щоб дізнатися ідеальну порцію плову саме для вас!</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="age" class="block text-gray-700 font-semibold mb-2"&gt;Вік (років)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="number" id="age" placeholder="Наприклад, 30"</p>
+<p class="p1"><span class="Apple-converted-space">                       </span>class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="height" class="block text-gray-700 font-semibold mb-2"&gt;Зріст (см)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="number" id="height" placeholder="Наприклад, 175"</p>
+<p class="p1"><span class="Apple-converted-space">                       </span>class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="weight" class="block text-gray-700 font-semibold mb-2"&gt;Вага (кг)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="number" id="weight" placeholder="Наприклад, 75"</p>
+<p class="p1"><span class="Apple-converted-space">                       </span>class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button id="calculateBtn"</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-xl shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Розрахувати</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="resultBox" class="mt-8 hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-gray-100 p-6 rounded-2xl border border-gray-300 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-bold text-gray-800"&gt;Результат:&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p id="resultText" class="mt-2 text-2xl font-extrabold text-blue-600 animate-pulse"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Результат буде тут --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const ageInput = document.getElementById('age');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const heightInput = document.getElementById('height');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const weightInput = document.getElementById('weight');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const calculateBtn = document.getElementById('calculateBtn');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const resultBox = document.getElementById('resultBox');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const resultText = document.getElementById('resultText');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>calculateBtn.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Отримуємо значення з полів та перетворюємо їх на числа</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const age = parseFloat(ageInput.value);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const height = parseFloat(heightInput.value);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const weight = parseFloat(weightInput.value);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Проста валідація вхідних даних</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (isNaN(age) || isNaN(height) || isNaN(weight) || age &lt;= 0 || height &lt;= 0 || weight &lt;= 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>resultText.textContent = "Будь ласка, введіть коректні позитивні числа.";</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>resultBox.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>resultBox.classList.add('bg-red-100', 'border-red-400');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>resultText.classList.remove('text-blue-600', 'animate-pulse');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>resultText.classList.add('text-red-700');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Вигадана формула для розрахунку порції плова</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Це просто приклад, щоб калькулятор працював :)</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let basePlov = 250; // Базова порція в грамах</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Додаємо вагу</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const weightFactor = (weight - 70) * 3;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Додаємо зріст</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const heightFactor = (height - 170) * 1.5;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Додаємо вік</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const ageFactor = (age - 30) * 0.8;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>let plovAmount = basePlov + weightFactor + heightFactor + ageFactor;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Мінімальна порція 150г, щоб не було від'ємних значень</p>
+<p class="p1"><span class="Apple-converted-space">                </span>plovAmount = Math.max(150, plovAmount);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Округлюємо до найближчого цілого числа</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const roundedAmount = Math.round(plovAmount);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Відображаємо результат</p>
+<p class="p1"><span class="Apple-converted-space">                </span>resultBox.classList.remove('bg-red-100', 'border-red-400', 'hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>resultBox.classList.add('bg-gray-100', 'border-gray-300');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>resultText.classList.remove('text-red-700');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>resultText.classList.add('text-blue-600', 'animate-pulse');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>resultText.textContent = `${roundedAmount} грам плову. Смачного!`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
