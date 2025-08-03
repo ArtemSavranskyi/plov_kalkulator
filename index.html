@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор плова Ігора Лексувовича</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .container {
+            max-width: 500px;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="container bg-white p-8 rounded-2xl shadow-xl border border-gray-200">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Калькулятор плова Ігора Лексувовича</h1>
+        <p class="text-center text-gray-600 mb-8">
+            Введіть свої дані, щоб дізнатися ідеальну порцію плову саме для вас!
+        </p>
+
+        <div class="space-y-6">
+            <div>
+                <label for="age" class="block text-gray-700 font-semibold mb-2">Вік (років)</label>
+                <input type="number" id="age" placeholder="Наприклад, 30"
+                       class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+            </div>
+            <div>
+                <label for="height" class="block text-gray-700 font-semibold mb-2">Зріст (см)</label>
+                <input type="number" id="height" placeholder="Наприклад, 175"
+                       class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+            </div>
+            <div>
+                <label for="weight" class="block text-gray-700 font-semibold mb-2">Вага (кг)</label>
+                <input type="number" id="weight" placeholder="Наприклад, 75"
+                       class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+            </div>
+
+            <button id="calculateBtn"
+                    class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-xl shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                Розрахувати
+            </button>
+        </div>
+
+        <div id="resultBox" class="mt-8 hidden">
+            <div class="bg-gray-100 p-6 rounded-2xl border border-gray-300 text-center">
+                <h3 class="text-xl font-bold text-gray-800">Результат:</h3>
+                <p id="resultText" class="mt-2 text-2xl font-extrabold text-blue-600 animate-pulse">
+                    <!-- Результат буде тут -->
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const ageInput = document.getElementById('age');
+            const heightInput = document.getElementById('height');
+            const weightInput = document.getElementById('weight');
+            const calculateBtn = document.getElementById('calculateBtn');
+            const resultBox = document.getElementById('resultBox');
+            const resultText = document.getElementById('resultText');
+
+            calculateBtn.addEventListener('click', () => {
+                const age = parseFloat(ageInput.value);
+                const height = parseFloat(heightInput.value);
+                const weight = parseFloat(weightInput.value);
+
+                if (isNaN(age) || isNaN(height) || isNaN(weight) || age <= 0 || height <= 0 || weight <= 0) {
+                    resultText.textContent = "Будь ласка, введіть коректні позитивні числа.";
+                    resultBox.classList.remove('hidden');
+                    resultBox.classList.add('bg-red-100', 'border-red-400');
+                    resultText.classList.remove('text-blue-600', 'animate-pulse');
+                    resultText.classList.add('text-red-700');
+                    return;
+                }
+
+                let basePlov = 250;
+                const weightFactor = (weight - 70) * 3;
+                const heightFactor = (height - 170) * 1.5;
+                const ageFactor = (age - 30) * 0.8;
+                
+                let plovAmount = basePlov + weightFactor + heightFactor + ageFactor;
+                plovAmount = Math.max(150, plovAmount);
+                const roundedAmount = Math.round(plovAmount);
+                
+                resultBox.classList.remove('bg-red-100', 'border-red-400', 'hidden');
+                resultBox.classList.add('bg-gray-100', 'border-gray-300');
+                resultText.classList.remove('text-red-700');
+                resultText.classList.add('text-blue-600', 'animate-pulse');
+                resultText.textContent = `${roundedAmount} грам плову. Смачного!`;
+            });
+        });
+    </script>
+
+</body>
+</html>
